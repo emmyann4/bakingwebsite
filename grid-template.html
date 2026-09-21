@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="mi"> <!-- Māori language. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Search Engine Optimisation (SEO) metadata. -->
+    <meta name="description" content="My website description." />
+    <link rel="canonical" href="http://design.ac.nz/student/2024/your-name/final-project" />
+    <meta property="og:locale" content="en_NZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="My Website." />
+    <meta property="og:description" content="My website description." />
+    <meta property="og:url" content="http://design.ac.nz/student/2024/your-name/final-project" />
+    <meta property="og:site_name" content="My Website." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="My website description." />
+    <meta name="twitter:title" content="My Website." />
+    <meta name="twitter:site" content="@YourName" />
+    <meta name="twitter:creator" content="@YourName" />
+    <script
+        type='application/ld+json'>{"@context":"https://schema.org","@type":"WebSite","@id":"http://design.ac.nz/student/2024/your-name/final-project","url":"http://design.ac.nz/student/2024/your-name/final-project","name":"My Website.","potentialAction":{"@type":"SearchAction","target":"http://design.ac.nz/student/2024/your-name/final-project?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <script
+        type='application/ld+json'>{"@context":"https://schema.org","@type":"Organization","url":"http://design.ac.nz/student/2024/your-name/final-project","sameAs":["https://www.facebook.com/YourName/","https://www.instagram.com/YourName/","https://www.youtube.com/user/YourName","https://nz.pinterest.com/YourName/","https://twitter.com/YourName"],"@id":"http://design.ac.nz/student/2024/your-name/final-project#organization","name":"My Website. Limited","logo":"http://design.ac.nz/student/2024/your-name/final-project/images/logo.png"}</script>
+    <!-- / (SEO) metadata. -->
+
+    <!-- Google Fonts - Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts - hamburger menu icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+
+    <!-- Flickity Carousel CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <title>Website Template - Grid Templates</title>
+</head>
+
+<body>
+    <main> <!-- Maximum width of Main content area is 1200px -->
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          HEADER AND NAVIGATION
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <header>
+            <h1>Website Template</h1>
+            <nav class="topnav" id="myTopnav">
+                <a href="index.html">Home</a>
+                <a href="grid-template.html">Grid templates</a>
+                <a href="single-item.html">Single item</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
+                <span class="material-symbols-outlined" id="menuIcon">menu</span>
+            </button>
+        </header>
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          INTRODUCTION OR BANNER AREA
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <article class="introduction">
+            <h2>
+                My Website - Grid Template
+            </h2>
+            <p>
+                Below, is the Grid Template.
+            </p>
+            <a href="#" class="readmore-button">
+                Continue reading &hellip;
+            </a>
+        </article>
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          GRID LAYOUT FOR PORTFOLIO WORK - PORTRAIT FORMAT
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <h2 class="grid-heading">Portrait Grid</h2>
+        <section class="portrait__grid">
+
+            <a href="single-item.html" class="portrait">
+                <img src="images/dune.jpg" alt="Dune" class="portrait__image">
+                <h2 class="portrait__name">Dune</h2>
+                <p class="portrait__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="portrait">
+                <img src="images/fleabag.jpg" alt="Dune" class="portrait__image">
+                <h2 class="portrait__name">Fleabag</h2>
+                <p class="portrait__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="portrait">
+                <img src="images/great-gatsby.jpg" alt="Dune" class="portrait__image">
+                <h2 class="portrait__name">The Great Gatsby</h2>
+                <p class="portrait__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="portrait">
+                <img src="images/lord-of-the-flies.jpg" alt="Dune" class="portrait__image">
+                <h2 class="portrait__name">Lord of the Flies</h2>
+                <p class="portrait__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="portrait">
+                <img src="images/night-ocean.jpg" alt="Dune" class="portrait__image">
+                <h2 class="portrait__name">The Night Ocean</h2>
+                <p class="portrait__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="portrait">
+                <img src="images/peter-and-the-wolf.jpg" alt="Dune" class="portrait__image">
+                <h2 class="portrait__name">Peter and the Wolf</h2>
+                <p class="portrait__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="portrait">
+                <img src="images/schizoid-man.jpg" alt="Dune" class="portrait__image">
+                <h2 class="portrait__name">21st Century Schizoid Man</h2>
+                <p class="portrait__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="portrait">
+                <img src="images/teaspoon.jpg" alt="Dune" class="portrait__image">
+                <h2 class="portrait__name">Teaspoon</h2>
+                <p class="portrait__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="portrait">
+                <img src="images/the-bell-jar.jpg" alt="Dune" class="portrait__image">
+                <h2 class="portrait__name">The Bell Jar</h2>
+                <p class="portrait__description">Description text goes here.</p>
+            </a>
+
+        </section>
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          GRID LAYOUT FOR PORTFOLIO WORK - LANDSCAPE FORMAT
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <h2 class="grid-heading">Landscape Grid</h2>
+        <section class="landscape__grid">
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-001.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-002.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-003.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-004.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-005.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-006.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-007.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-008.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-009.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-010.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-011.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+            <a href="single-item.html" class="landscape">
+                <img src="images/image-012.jpg" alt="landscape image" class="landscape__image">
+                <h2 class="landscape__name">Landscape image</h2>
+                <p class="landscape__description">Description text goes here.</p>
+            </a>
+
+        </section>
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          MASONRY LAYOUT FOR PORTFOLIO WORK - SUITABLE FOR A MIX OF PORTRAIT AND LANDSCAPE FORMAT IMAGES
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <h2 class="grid-heading">Masonry Grid</h2>
+        <section class="grid--masonry">
+            <img src="images/dune.jpg" alt="Dune">
+            <img src="images/image-001.jpg" alt="landscape image">
+            <img src="images/image-002.jpg" alt="landscape image">
+            <img src="images/image-003.jpg" alt="landscape image">
+            <img src="images/fleabag.jpg" alt="Dune">
+            <img src="images/image-005.jpg" alt="landscape image">
+            <img src="images/image-008.jpg" alt="landscape image">
+            <img src="images/image-011.jpg" alt="landscape image">
+            <img src="images/image-012.jpg" alt="landscape image">
+            <img src="images/great-gatsby.jpg" alt="Dune">
+            <img src="images/image-007.jpg" alt="landscape image">
+            <img src="images/lord-of-the-flies.jpg" alt="Dune">
+            <img src="images/night-ocean.jpg" alt="Dune">
+            <img src="images/peter-and-the-wolf.jpg" alt="Dune">
+            <img src="images/image-006.jpg" alt="landscape image">
+            <img src="images/image-009.jpg" alt="landscape image">
+            <img src="images/image-010.jpg" alt="landscape image">
+            <img src="images/schizoid-man.jpg" alt="Dune">
+            <img src="images/teaspoon.jpg" alt="Dune">
+            <img src="images/image-004.jpg" alt="landscape image">
+            <img src="images/the-bell-jar.jpg" alt="Dune">
+        </section>
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+            FOOTER
+
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <footer>
+            <p>
+                Copyright Your Name &copy; 2024. Copyright material on this website is protected by copyright owned by
+                Your Name Here. Unless indicated otherwise for specific items or collections of content (either below or
+                within specific items or collections), this copyright material is licensed for re-use under the Creative
+                Commons Attribution / Share-Alike (CC BY-SA 4.0) International licence. In essence, you are free to
+                copy, distribute and adapt the material, as long as you attribute it to me and abide by the other
+                licence terms. Please note that this licence does not apply to any logos, design, images, photography,
+                drawing, animation, emblems and trade marks on the website or to the website’s design elements, or to
+                any other photography and imagery embedded in the website or used in the background. Those specific
+                items may not be re-used without express permission from the website owner.
+            </p>
+            <div class="footer-grid">
+
+                <article class="footer__menu">
+                    <h2 class="footer__menu__heading">
+                        Portfolio
+                    </h2>
+                    <ul class="footer__menu__list">
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Drawing</a></li>
+                        <li><a href="#">Animation</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                    </ul>
+                </article>
+
+                <article class="footer__menu">
+                    <h2 class="footer__menu__heading">
+                        About me
+                    </h2>
+                    <ul class="footer__menu__list">
+                        <li><a href="#">History &amp; CV</a></li>
+                        <li><a href="#">Hobbies &amp; Interests</a></li>
+                        <li><a href="#">More interesting stuff</a></li>
+                    </ul>
+                </article>
+
+                <article class="footer__menu">
+                    <h2 class="footer__menu__heading">
+                        Education
+                    </h2>
+                    <ul class="footer__menu__list">
+                        <li><a href="#">My Education Journey</a></li>
+                        <li><a href="#">Where I am Heading</a></li>
+                        <li><a href="https://www.op.ac.nz">Otago Polytechnic</a></li>
+                        <li><a href="https://www.op.ac.nz/schools/school-of-design/">School of Design</a></li>
+                    </ul>
+                </article>
+
+                <article class="footer__menu">
+                    <h2 class="footer__menu__heading">
+                        Social links
+                    </h2>
+                    <ul class="footer__menu__list">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">MySpace</a></li>
+                        <li><a href="#">TikTok</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <div class="footer__copyright-details">
+                <p>All images are in the public domain.<br>Copyright Your Name Here &copy; 2024.</p>
+                <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span
+                        property="dct:title">This website</span> by <span property="cc:attributionName">Your Name
+                        Here</span></p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- ***************************************
+            J A V A S C R I P T   B E L O W !
+         *************************************** -->
+
+    <!-- JavaScript for the MASONRY GRID LAYOUT -->
+    <script src="js/masonry-grid-script.js"></script>
+
+   <!-- JavaScript for the MOBILE NAV MENU -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("myTopnav");
+            const icon = document.getElementById("menuIcon");
+            const btn = document.getElementById("menuToggle");
+
+            const isOpen = nav.classList.toggle("responsive");
+            icon.textContent = isOpen ? "close" : "menu";
+            btn.setAttribute("aria-expanded", isOpen);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,801 @@
+/*  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+  Author: Your name here
+  Date: creation date
+
+  CONTENTS:
+  ________
+
+  001   COLOUR                          (line 24)
+  002.  GENERAL STYLES                  (line 34)
+  003.  HEADER                          (line 66)
+  004.  NAVIGATION MENU                 (line 87)
+  005.  INTRO BANNER AT TOP OF PAGE     (line 189)
+  006.  FLICKITY CAROUSEL               (line 240)
+  007.  PORTRAIT LAYOUT                 (line 258)
+  008.  LANDSCAPE LAYOUT                (line 306)
+  009.  MASONRY LAYOUT                  (line 354)
+  010.  SINGLE ITEM LAYOUT              (line 380)
+  011.  CONTACT FORM                    (line 507)
+  012.  WEBSITE FOOTER                  (line 648)
+
+  (to jump to any section of the Contents, use the section number (e.g. 002) in 'Find', Cmd-F) */
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  
+      001.  COLOUR
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+:root {
+    --dark-text: #13381f;
+    --light-text: #fcfcfa;
+    --cream-text: #f6ead0;
+    --medium-dark-text: #055723;
+    --main-background: #F2C230;
+    --header-background: #F2E5A2;
+    --intro-background: #F29F05;
+    --dark-background: #002F15;
+    --portrait-background: #e06c10;
+    --landscape-background: #F23A29;
+    --dark-border-colour: #08331c;
+    --button-colour: #402320;
+    --dark-green: #13632e;
+    --slide-out-menu-background: rgba(233, 240, 234, 0.93);
+    --footer-background: #73645C;
+    --off-white: #fcfcf5;
+    --description-text: #8c8e8d;
+    --description-text-colour: #fcfcfa;
+    --light-silver: #fcfcfa;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  
+      002.  GENERAL STYLES
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+body {
+    font-family:  'Space Grotesk', sans-serif;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #1d1d1b;
+    font-size: 1.2rem;
+    background-color: #97c8e3;
+}
+
+img {
+    width: 100%;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* This is the main content container for all pages - max width 1200px, or 75rem*/
+main {
+    max-width: 1200px;
+    background-color: var(--main-background);
+    margin: 0 auto;
+    /* The line above makes the container centred within the page */
+}
+
+.external-link {
+    text-decoration: underline;
+    color: var(--cream-text);
+}
+
+.grid-heading {
+    font-weight: 500;
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+  
+    003.  HEADER
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+header {
+    position: relative; /* <-- needed so .icon anchors to the header, not the page */
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--header-background);
+    padding: 2rem 0 2rem 2rem;
+    min-height: 7rem;
+}
+
+header h1 {
+    color: var(--dark-text);
+    font-weight: 600;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    004.  NAVIGATION MENU
+  
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+header {
+    position: relative; /* anchors .icon to the header, not the page */
+}
+
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 0.5rem 2rem;
+    width: 100%;
+}
+
+.topnav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+
+.topnav a:hover {
+    text-decoration: underline;
+}
+
+.topnav a.current-page {
+    font-weight: 600;
+}
+
+.icon {
+    display: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    color: #000;
+    font-size: 2rem;
+}
+
+/* First breakpoint */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 2rem 0 2rem 1rem;
+        min-height: 4rem;
+    }
+
+    .topnav a {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .topnav.responsive {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40vw;
+        margin-top: 0;
+        padding: 6rem 2rem 4rem 2rem;
+        background-color: beige;
+    }
+
+    .topnav.responsive a {
+        display: block;
+        text-align: right;
+    }
+}
+
+/* Second breakpoint */
+@media screen and (max-width: 400px) {
+    header h1 {
+        max-width: 18.75rem;
+        line-height: 100%;
+    }
+
+    header {
+        padding-bottom: 2rem;
+    }
+}
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    005.  INTRO BANNER AT TOP OF PAGE
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.introduction {
+    background-color: var(--intro-background);
+    padding: 2rem;
+}
+
+.introduction h2 {
+    color: var(--dark-text);
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.introduction p {
+    color: var(--dark-text);
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.readmore-button {
+    background-color: var(--button-colour);
+    border: none;
+    color: var(--off-white);
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    transition: all .3s;
+    border-radius: 5px;
+}
+
+.readmore-button:hover {
+    background-color: var(--button-colour);
+    color: var(--cream-text);
+    box-shadow: none;
+}
+
+.readmore-button:active {
+    box-shadow: inset 0 2px 15px rgba(0, 0, 0, .3);
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    006.  FLICKITY CAROUSEL
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.carousel-section .caption {
+    background: #FAFAFA;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    color: #524d49;
+    font-size: .8rem;
+    font-weight: 200;
+    font-family: var(--typeface-open-sans);
+    font-style: italic;
+}
+
+.carousel-cell {
+    width: 100%;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    007.  PORTRAIT LAYOUT - for a grid of portrait format images
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/* This sets the grid layout for the page. */
+@supports (display: grid) {
+    .portrait__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+        gap: 2rem;
+        margin: 2rem;
+    }
+}
+
+/* This 'portrait' class is a container for the text and images */
+.portrait {
+    text-align: center;
+    background-color: var(--portrait-background);
+    border-radius: .4rem;
+    padding: 2rem 2rem 1.4rem 2rem;
+    transition: box-shadow .3s;
+    text-decoration: none;
+}
+
+.portrait:hover {
+    box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px, rgba(0, 0, 0, 0.5) 0px 8px 16px -8px;
+}
+
+.portrait__image {
+    width: 100%;
+}
+
+.portrait__name {
+    color: var(--cream-text);
+    font-weight: 400;
+    margin-top: .8rem;
+    margin-bottom: .4rem;
+}
+
+.portrait__description {
+    color: var(--cream-text);
+    font-weight: 400;
+    font-size: .7rem;
+    margin-bottom: 1rem;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    008.  LANDSCAPE LAYOUT - for a grid of landscape format images
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/* This sets the grid layout for the page. */
+@supports (display: grid) {
+    .landscape__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+        gap: 1rem;
+        margin: 1rem;
+    }
+}
+
+/* This 'landscape' class is a container for the text and images */
+.landscape {
+    text-align: center;
+    background-color: var(--landscape-background);
+    border-radius: .4rem;
+    padding: 2rem 2rem 1.4rem 2rem;
+    transition: box-shadow .3s;
+    text-decoration: none;
+}
+
+.landscape:hover {
+    box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px, rgba(0, 0, 0, 0.5) 0px 8px 16px -8px;
+}
+
+.landscape__image {
+    width: 100%;
+}
+
+.landscape__name {
+    color: var(--cream-text);
+    font-weight: 400;
+    margin-top: .8rem;
+    margin-bottom: .4rem;
+}
+
+.landscape__description {
+    color: var(--cream-text);
+    font-weight: 400;
+    font-size: .7rem;
+    margin-bottom: 1rem;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    009.  MASONRY LAYOUT - for a mix of landscape and portrait format images
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/* masonry grid CSS */
+.grid--masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min(24rem, 100%));
+    grid-template-rows: masonry;
+    justify-content: center;
+    grid-row-gap: 1.25rem;
+    grid-column-gap: 1.25rem;
+    grid-gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+.grid--masonry>* {
+    width: min(24rem, 100%);
+}
+
+.grid--masonry img {
+    border-radius: 4px;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    010.  SINGLE ITEM LAYOUT
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/*  Using 'grid-template-areas' you can design the layout of the containers 
+      For Desktop and Mobile device widths. This layout displays containers in 2 columns, for Desktop and Laptop, and 1 column for phones. 
+      A full-stop '.' means 'create a space' */
+
+@supports (display: grid) {
+    .single-item {
+        display: grid;
+        gap: 1.5rem;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            'single-item__image single-item__h2'
+            'single-item__image single-item__h3'
+            'single-item__image single-item__introduction'
+            'single-item__block-one single-item__block-two';
+        padding-block: 2rem;
+        width: min(95%, 70em);
+        margin-inline: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .single-item__image {
+        max-width: 400px;
+    }
+}
+
+/* For mobile device widths, containers below are stacked in a single column - max width 875px or 54.688rem */
+@media screen and (max-width: 875px) {
+    .single-item {
+        grid-template-areas: 'single-item__h2'
+            'single-item__image'
+            'single-item__h3'
+            'single-item__introduction'
+            'single-item__block-one'
+            'single-item__block-two';
+        margin-left: 1em;
+    }
+}
+
+.single-item__image {
+    grid-area: single-item__image;
+    width: 100%;
+    max-width: 800px;
+}
+
+.single-item__h2 {
+    grid-area: single-item__h2;
+    color: var(--dark-text);
+    font-weight: 400;
+    font-size: 2.6rem;
+}
+
+.single-item__h3 {
+    grid-area: single-item__h3;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.8rem;
+}
+
+.single-item__introduction {
+    grid-area: single-item__introduction;
+    font-weight: 400;
+    font-size: 1.2rem;
+    max-width: 24rem;
+    margin-bottom: .5rem;
+}
+
+.single-item__block-one {
+    grid-area: single-item__block-one;
+}
+
+.single-item__block-two {
+    grid-area: single-item__block-two;
+}
+
+.single-item__h4 {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.single-item__p {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.single-item__ul {
+    list-style-type: none;
+}
+
+.single-item__ul li {
+    padding-left: 1rem;
+    background-image: url(images/list-image.svg);
+    background-position: 0 .5rem;
+    background-size: .7rem .7rem;
+    background-repeat: no-repeat;
+}
+
+/* This 'Next' button below is unused at the moment. Where might you use this in your web page? */
+.next-button {
+    background-color: var(--dark-text);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 0;
+    font-size: 26px;
+    color: var(--off-white);
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.next-button i {
+    margin-left: .2rem;
+}
+
+.next-button:hover {
+    background-color: var(--dark-text);
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    011.  CONTACT FORM
+  
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/*  Here is the Contact Form arranged in two columns
+    A dot denotes a blank space, so the elements on those rows are left-aligned */
+
+@supports (display: grid) {
+    .contact-form {
+        display: grid;
+        gap: 1.5rem;
+        grid-auto-columns: 1fr 1fr;
+        grid-template-areas:
+            'contact-heading .'
+            'contact-name contact-email'
+            'contact-pref .'
+            'contact-message .'
+            'contact-browser .'
+            'contact-submit .';
+        padding-block: 2rem;
+        width: min(95%, 70rem);
+        margin-inline: auto;
+    }
+}
+
+/*  For mobile device widths, elements are stacked in a single column */
+@media screen and (max-width: 1040px) {
+    .contact-form {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            'contact-heading'
+            'contact-name'
+            'contact-email'
+            'contact-pref'
+            'contact-message'
+            'contact-browser'
+            'contact-submit';
+        margin-left: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        width: 20rem;
+    }
+}
+
+/*  For mobile device widths, elements are stacked in a single column */
+@media screen and (max-width: 600px) {
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        max-width: 90dvw;
+    }
+}
+
+.contact-form__heading {
+    grid-area: contact-heading;
+    color: var(--dark-text);
+    font-weight: 400;
+    font-size: 2.6rem;
+}
+
+.contact-form label {
+    min-width: 100rem;
+}
+
+.contact-form h3,
+.contact-form p {
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+.contact-form__name {
+    grid-area: contact-name;
+}
+
+.contact-form__email {
+    grid-area: contact-email;
+}
+
+.contact-form__preference {
+    grid-area: contact-pref;
+}
+
+.contact-form__message {
+    grid-area: contact-message;
+}
+
+.contact-form__browser {
+    grid-area: contact-browser;
+}
+
+.contact-form__submit {
+    grid-area: contact-submit;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0 1.4rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    background-color: var(--light-silver);
+    color: var(--dark-text);
+}
+
+.contact-form .contact-form__message textarea {
+    padding-top: .8rem;
+    width: 30rem;
+}
+
+.contact-form input,
+.contact-form select {
+    height: 2.8rem;
+    width: 30rem;
+}
+
+.contact-form__submit button {
+    background-color: var(--button-colour);
+    border: none;
+    color: var(--off-white);
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    transition: all .3s;
+    border-radius: 5px;
+}
+
+.contact-form__submit button:hover {
+    color: var(--cream-text);
+    box-shadow: none;
+}
+
+.contact-form__submit button:active {
+    box-shadow: inset 0 2px 15px rgba(0, 0, 0, .3);
+}
+
+.success-page {
+    margin: 5dvw;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    012.  WEBSITE FOOTER
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+footer {
+    background-color: var(--footer-background);
+    padding: 2rem;
+    color: var(--off-white);
+}
+
+footer p {
+    font-size: .8rem;
+}
+
+@supports (display: grid) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-gap: 2rem;
+    }
+}
+
+.footer__menu {
+    padding: 2rem;
+}
+
+.footer__menu__heading {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+ul.footer__menu__list {
+    list-style-type: none;
+}
+
+ul.footer__menu__list li a {
+    text-decoration: none;
+    color: var(--off-white);
+}
+
+ul.footer__menu__list li a:hover {
+    text-decoration: underline;
+}
+
+.footer__copyright-details p {
+    font-size: .8rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* *********************
+    FOOTER MEDIA QUERIES
+   ********************* */
+
+/* Max width 1120px or 70rem */
+@media screen and (max-width: 1120px) {
+    .footer-grid {
+        grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
+    }
+
+    .footer__menu {
+        padding: 0;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2rem;
+    }
+
+    .footer__menu {
+        padding: 0;
+    }
+
+    footer p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* = = =   E N D   O F   T H E   C S S  = = = */
+
+/* *********************
+    CSS BREAKPOINTS
+   ********************* */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
