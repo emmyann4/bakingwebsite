@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="mi"> <!-- Māori language. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Search Engine Optimisation (SEO) metadata. -->
+    <meta name="description" content="My website description." />
+    <link rel="canonical" href="http://design.ac.nz/student/2024/your-name/final-project" />
+    <meta property="og:locale" content="en_NZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="My Website." />
+    <meta property="og:description" content="My website description." />
+    <meta property="og:url" content="http://design.ac.nz/student/2024/your-name/final-project" />
+    <meta property="og:site_name" content="My Website." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="My website description." />
+    <meta name="twitter:title" content="My Website." />
+    <meta name="twitter:site" content="@YourName" />
+    <meta name="twitter:creator" content="@YourName" />
+    <script
+        type='application/ld+json'>{"@context":"https://schema.org","@type":"WebSite","@id":"http://design.ac.nz/student/2024/your-name/final-project","url":"http://design.ac.nz/student/2024/your-name/final-project","name":"My Website.","potentialAction":{"@type":"SearchAction","target":"http://design.ac.nz/student/2024/your-name/final-project?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <script
+        type='application/ld+json'>{"@context":"https://schema.org","@type":"Organization","url":"http://design.ac.nz/student/2024/your-name/final-project","sameAs":["https://www.facebook.com/YourName/","https://www.instagram.com/YourName/","https://www.youtube.com/user/YourName","https://nz.pinterest.com/YourName/","https://twitter.com/YourName"],"@id":"http://design.ac.nz/student/2024/your-name/final-project#organization","name":"My Website. Limited","logo":"http://design.ac.nz/student/2024/your-name/final-project/images/logo.png"}</script>
+    <!-- / (SEO) metadata. -->
+
+    <!-- Google Fonts - Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts - hamburger menu icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />  
+
+    <!-- Flickity Carousel CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <title>Website Template - Single Item</title>
+</head>
+
+<body>
+    <main> <!-- Maximum width of Main content area is 1200px -->
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          HEADER AND NAVIGATION
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <header>
+            <h1>Website Template</h1>
+            <nav class="topnav" id="myTopnav">
+                <a href="index.html">Home</a>
+                <a href="grid-template.html">Grid templates</a>
+                <a href="single-item.html">Single item</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
+                <span class="material-symbols-outlined" id="menuIcon">menu</span>
+            </button>
+        </header>
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+        ARTICLE
+
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <article class="recipe">
+
+            <div class="recipe_header">
+                <img src="left-pink-swirl.svg" alt="">
+                <h2>Blueberry Muffins</h2>
+                <img src="right-pink-swirl.svg" alt="">
+            </div>
+
+
+            <div class="recipe_image-carousel">
+                
+            </div>
+
+            <div class="recipe_block">
+                <div class="recipe_ingredients">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>flour</li>
+                    </ul>
+                </div>
+                <div class="recipe_recipe">
+                    <h3>Recipe</h3>
+                    <ul>
+                        <li>place flour</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recipe_ratings">
+                <img src="recipe_final-blueberry-muffin.jpg" alt="">
+                <img src="five-star-rating.svg" alt="">
+                <div>
+                    <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/contact-success.html">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="contact-form__message">
+                        <label>Message: </label><br><textarea name="message" rows="7" cols="60"
+                        placeholder="Type your message. . ."></textarea>
+                    </p>
+                    <p class="contact-form__submit">
+                        <button type="submit">Send</button>
+                    </p>
+                </div>
+                
+            </div>
+
+
+         
+        </article>
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+            FOOTER
+
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <footer>
+
+                <article class="footer__menu">
+                    <h2 class="footer__menu__heading">
+                        Social links
+                    </h2>
+                    <ul class="footer__menu__list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">References</a></li>
+                    </ul>
+                </article>
+
+            <div class="footer__copyright-details">
+                <p>All images are in the public domain.<br>Copyright Your Name Here &copy; 2024.</p>
+                <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span
+                        property="dct:title">This website</span> by <span property="cc:attributionName">Your Name
+                        Here</span></p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- ***************************************
+            J A V A S C R I P T   B E L O W !
+         *************************************** -->
+
+
+
+    <!-- JavaScript for the MOBILE NAV MENU -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("myTopnav");
+            const icon = document.getElementById("menuIcon");
+            const btn = document.getElementById("menuToggle");
+
+            const isOpen = nav.classList.toggle("responsive");
+            icon.textContent = isOpen ? "close" : "menu";
+            btn.setAttribute("aria-expanded", isOpen);
+        }
+    </script>
+</body>
+
+</html>

@@ -32,18 +32,16 @@
     --light-text: #fcfcfa;
     --cream-text: #f6ead0;
     --medium-dark-text: #055723;
-    --main-background: #F2C230;
-    --header-background: #F2E5A2;
-    --intro-background: #F29F05;
+    --main-background: #ffe389;
+    --header-background: #ffd651;
     --dark-background: #002F15;
-    --portrait-background: #e06c10;
-    --landscape-background: #F23A29;
+    --landscape-background: #ffa500;
     --dark-border-colour: #08331c;
-    --button-colour: #402320;
+    --button-colour: #ffa500;
     --dark-green: #13632e;
     --slide-out-menu-background: rgba(233, 240, 234, 0.93);
-    --footer-background: #73645C;
-    --off-white: #fcfcf5;
+    --footer-background: #ffd651;
+    --off-white: #000000;
     --description-text: #8c8e8d;
     --description-text-colour: #fcfcfa;
     --light-silver: #fcfcfa;
@@ -63,7 +61,7 @@ body {
     font-style: normal;
     color: #1d1d1b;
     font-size: 1.2rem;
-    background-color: #97c8e3;
+    background-color: #ffe389;
 }
 
 img {
@@ -84,7 +82,7 @@ img {
 
 /* This is the main content container for all pages - max width 1200px, or 75rem*/
 main {
-    max-width: 1200px;
+    max-width: 2000px;
     background-color: var(--main-background);
     margin: 0 auto;
     /* The line above makes the container centred within the page */
@@ -109,16 +107,49 @@ main {
 
 header {
     position: relative; /* <-- needed so .icon anchors to the header, not the page */
-    max-width: 1200px;
+    max-width: 2000px;
     margin: 0 auto;
     background-color: var(--header-background);
-    padding: 2rem 0 2rem 2rem;
-    min-height: 7rem;
+    padding: 2rem 2rem 2rem 2rem;
+    /* min-height: 7rem; */
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
 }
 
 header h1 {
     color: var(--dark-text);
     font-weight: 600;
+    font-family: "mrs-eaves", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2, h3, h4, h5 {
+    font-family: "mrs-eaves", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo-container {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    /* background-color: orange;
+    border-radius: 50%; */
+    align-items: center;
+}
+
+.centred-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 270px;
+  height: 270px; /*(Optional: specify a width if needed) */
+}
+
+.search-bar {
+    width: 300px;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -136,13 +167,19 @@ header {
     flex-wrap: wrap;
     justify-content: left;
     gap: 0.5rem 2rem;
-    width: 100%;
+    /* width: 100%; */
+    align-content: center;
 }
 
 .topnav a {
+    font-family: "mrs-eaves", serif;;
     color: #000;
     text-decoration: none;
     font-size: 1.15rem;
+    background-color: #ffa500;
+    border-radius: 25px;
+    width: 90px;
+    text-align: center;
 }
 
 .topnav a:hover {
@@ -168,10 +205,20 @@ header {
 }
 
 /* First breakpoint */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1160px) {
     header {
         padding: 2rem 0 2rem 1rem;
         min-height: 4rem;
+    }
+
+    .centred-logo {
+        width: 70px;
+        height: 70px; /*(Optional: specify a width if needed) */
+        }
+
+    .logo-container {
+        width: 100px;
+        height: 100px;
     }
 
     .topnav a {
@@ -202,7 +249,7 @@ header {
 }
 
 /* Second breakpoint */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     header h1 {
         max-width: 18.75rem;
         line-height: 100%;
@@ -210,6 +257,9 @@ header {
 
     header {
         padding-bottom: 2rem;
+    }
+    .search-bar {
+        display: none;
     }
 }
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -285,53 +335,7 @@ header {
     width: 100%;
 }
 
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-  
-    007.  PORTRAIT LAYOUT - for a grid of portrait format images
-  
-= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-/* This sets the grid layout for the page. */
-@supports (display: grid) {
-    .portrait__grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-        gap: 2rem;
-        margin: 2rem;
-    }
-}
-
-/* This 'portrait' class is a container for the text and images */
-.portrait {
-    text-align: center;
-    background-color: var(--portrait-background);
-    border-radius: .4rem;
-    padding: 2rem 2rem 1.4rem 2rem;
-    transition: box-shadow .3s;
-    text-decoration: none;
-}
-
-.portrait:hover {
-    box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px, rgba(0, 0, 0, 0.5) 0px 8px 16px -8px;
-}
-
-.portrait__image {
-    width: 100%;
-}
-
-.portrait__name {
-    color: var(--cream-text);
-    font-weight: 400;
-    margin-top: .8rem;
-    margin-bottom: .4rem;
-}
-
-.portrait__description {
-    color: var(--cream-text);
-    font-weight: 400;
-    font-size: .7rem;
-    margin-bottom: 1rem;
-}
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
@@ -344,8 +348,8 @@ header {
     .landscape__grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
-        gap: 1rem;
-        margin: 1rem;
+        gap: 2rem;
+        margin: 2rem;
     }
 }
 
@@ -387,7 +391,7 @@ header {
   
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-/* masonry grid CSS */
+/* masonry grid CSS 
 .grid--masonry {
     display: grid;
     grid-template-columns: repeat(auto-fit, min(24rem, 100%));
@@ -403,9 +407,9 @@ header {
     width: min(24rem, 100%);
 }
 
-.grid--masonry img {
+.grid--masonry a img {
     border-radius: 4px;
-}
+} */
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
@@ -692,14 +696,80 @@ header {
   
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
+     /* position: relative; 
+    max-width: 2000px;
+    margin: 0 auto;
+    background-color: var(--header-background);
+    padding: 2rem 2rem 2rem 2rem;
+    min-height: 7rem;
+    height: 170px;
+    display: flex;
+    justify-content: space-between; */ 
+
 footer {
+    position: relative;
+    max-width: 2000px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
     background-color: var(--footer-background);
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    min-height: 7rem;
+    height: 170px;
     color: var(--off-white);
 }
 
 footer p {
     font-size: .8rem;
+}
+
+ .bottom-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 0.5rem 2rem;
+    align-content: center;
+}
+
+.bottom-nav a {
+    font-family: "mrs-eaves", serif;;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.15rem;
+    /* background-color: #ffa500;
+    border-radius: 25px; */
+    width: 90px;
+    text-align: center;
+}
+
+.bottom-nav a:hover {
+    text-decoration: underline;
+}
+
+.bottom-nav a.current-page {
+    font-weight: 600;
+} 
+
+.footer_logo-container {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    /* background-color: orange;
+    border-radius: 50%; */
+    align-items: center;
+}
+
+.footer-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px; /*(Optional: specify a width if needed) */
+}
+
+.footer-layout{
+    display: flex;
 }
 
 @supports (display: grid) {
@@ -759,7 +829,7 @@ ul.footer__menu__list li a:hover {
 
 @media screen and (max-width: 600px) {
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         margin-bottom: 2rem;
     }
 
