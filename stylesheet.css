@@ -268,6 +268,22 @@ header {
   
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
+.home-introduction{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 2rem;
+}
+
+.heading-swirl-left{
+width: 80px;
+}
+
+.heading-swirl-right{
+width: 80px;
+}
+
+
 .introduction {
     background-color: var(--intro-background);
     padding: 2rem;
@@ -287,7 +303,7 @@ header {
     margin-bottom: 1rem;
 }
 
-.readmore-button {
+/* .readmore-button {
     background-color: var(--button-colour);
     border: none;
     color: var(--off-white);
@@ -311,7 +327,7 @@ header {
 
 .readmore-button:active {
     box-shadow: inset 0 2px 15px rgba(0, 0, 0, .3);
-}
+} */
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
@@ -335,6 +351,122 @@ header {
     width: 100%;
 }
 
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    010.  ABOUT LAYOUT
+  
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/*  Using 'grid-template-areas' you can design the layout of the containers 
+      For Desktop and Mobile device widths. This layout displays containers in 2 columns, for Desktop and Laptop, and 1 column for phones. 
+      A full-stop '.' means 'create a space' */
+
+@supports (display: grid) {
+    .about-page-block{
+        display: grid;
+        gap: 1.5rem;
+        grid-auto-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'about-h2 about-h2'
+            'about-image about-top-swirls'
+            'about-image about-introduction-one'
+            'about-image about-introduction-one'
+            'about-introduction-two about-introduction-two'
+            'about-bottom-swirls about-bottom-swirls';
+        padding-block: 2rem;
+        width: min(95%, 70em);
+        margin-inline: auto;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .about-image {
+        max-width: 400px;
+    }
+}
+
+/* For mobile device widths, containers below are stacked in a single column - max width 875px or 54.688rem */
+@media screen and (max-width: 875px) {
+    .about-page-block {
+        grid-template-areas:
+            'about-h2'
+            'about-top-swirls'
+            'about-image'
+            'about-introduction-one'
+            'about-introduction-two'
+            'about-bottom-swirls';
+        margin-left: 1em;
+        align-items: start; 
+        grid-template-rows: 80px 1fr; 
+    }
+}
+
+.about-image {
+    grid-area: about-image; 
+    width: 100%;
+    max-width: 800px;
+}
+
+.about-h2 {
+    grid-area: about-h2;
+    color: var(--dark-text);
+    font-weight: 400;
+    font-size: 2.6rem;
+}
+
+.about-top-swirls {
+    grid-area: about-top-swirls;
+    width: 100%;
+    align-self: start;
+}
+
+.about-bottom-swirls {
+    grid-area: about-bottom-swirls;
+    width: 100%;
+}
+
+.about-introduction-one {
+    grid-area: about-introduction-one;
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* max-width: 24rem; */
+    margin-bottom: .5rem;
+    align-self: start;
+    place-self: start start;
+}
+
+.about-introduction-two {
+    grid-area: about-introduction-two;
+    font-weight: 400;
+    font-size: 1.2rem;
+    /* max-width: 24rem; */
+    margin-bottom: .5rem;
+}
+
+.single-item__h4 {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.single-item__p {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.single-item__ul {
+    list-style-type: none;
+}
+
+.single-item__ul li {
+    padding-left: 1rem;
+    background-image: url(images/list-image.svg);
+    background-position: 0 .5rem;
+    background-size: .7rem .7rem;
+    background-repeat: no-repeat;
+}
 
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -427,8 +559,6 @@ header {
         gap: 1.5rem;
         grid-auto-columns: 1fr;
         grid-template-areas:
-            'single-item__image single-item__h2'
-            'single-item__image single-item__h3'
             'single-item__image single-item__introduction'
             'single-item__block-one single-item__block-two';
         padding-block: 2rem;
@@ -754,23 +884,21 @@ footer p {
 .footer_logo-container {
     display: flex;
     width: 200px;
-    height: 200px;
-    /* background-color: orange;
-    border-radius: 50%; */
+    /* height: 200px; */
     align-items: center;
 }
 
 .footer-logo {
   display: block;
-  margin-left: auto;
+  margin-left: 800px;
   margin-right: auto;
   width: 150px;
   height: 150px; /*(Optional: specify a width if needed) */
 }
 
-.footer-layout{
+/* .footer-layout{
     display: flex;
-}
+} */
 
 @supports (display: grid) {
     .footer-grid {
