@@ -421,9 +421,9 @@ width: 80px;
     width: 800px;
 }
 
-.flickity-viewport {
+/* .flickity-viewport {
         width: 1000px;
-}
+} */
 
 .carousel-section .caption {
     background: #FAFAFA;
@@ -453,6 +453,27 @@ width: 80px;
         margin-right: 10px;
         /* vertically center */
         top: 50%;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    Recipe Layout
+  
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.recipe-introduction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.heading-swirl-left{
+width: 80px;
+}
+
+.heading-swirl-right{
+width: 80px;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -587,7 +608,7 @@ width: 80px;
 @supports (display: grid) {
     .landscape__grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr));
         gap: 2rem;
         margin: 2rem;
     }
