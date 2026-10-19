@@ -52,18 +52,90 @@
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
         <header>
-            <h1>Website Template</h1>
+
+            <!-- <h1>The No Dairy Fairy</h1> -->
             <nav class="topnav" id="myTopnav">
                 <a href="index.html">Home</a>
-                <a href="grid-template.html">Grid templates</a>
-                <a href="single-item.html">Single item</a>
+                <a href="recipes.html">Recipes</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </nav>
             <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
                 <span class="material-symbols-outlined" id="menuIcon">menu</span>
             </button>
+
+            <!-- <h1>The No Dairy Fairy</h1>  -->
+               <div class="logo-container">
+                    <img src="images/website-assets/logo-orange.png" alt="Centred Logo" class="centred-logo">
+               </div>
+
+            <img src="images/website-assets/search-bar-orange.svg" class="search-bar">
+
         </header>
+
+           <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          CAROUSEL – using Flickity carousel: https://flickity.metafizzy.co/
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <section class="carousel-section">
+            <article class="main-carousel">
+                <!-- Flickity Options: https://flickity.metafizzy.co/options -->
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step1.JPG"
+                        alt="blueberry-muffins-step1.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step2.JPG"
+                        alt="blueberry-muffins-step2.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step3.JPG"
+                        alt="blueberry-muffins-step3.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step4.JPG"
+                        alt="blueberry-muffins-step4.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step5.JPG"
+                        alt="blueberry-muffins-step5.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step6.JPG"
+                        alt="blueberry-muffins-step6.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step7.JPG"
+                        alt="blueberry-muffins-step7.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step8.JPG"
+                        alt="blueberry-muffins-step8.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step9.JPG"
+                        alt="blueberry-muffins-step9.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step10.JPG"
+                        alt="blueberry-muffins-step10.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step11.JPG"
+                        alt="blueberry-muffins-step11.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step12.JPG"
+                        alt="blueberry-muffins-step12.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step13.JPG"
+                        alt="blueberry-muffins-step13.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step14.JPG"
+                        alt="blueberry-muffins-step14.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step15.JPG"
+                        alt="blueberry-muffins-step15.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step16.JPG"
+                        alt="blueberry-muffins-step1.JPG">
+                </div>
+                <div class="carousel-cell"><img src="images/blueberry-muffins/jpgs/blueberry-muffins-step17-final1.JPG"
+                        alt="blueberry-muffins-step17-final1.JPG">
+                </div>
+            </article>
+            <p class="caption">&nbsp;</p>
+        </section>
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
@@ -155,7 +227,38 @@
             J A V A S C R I P T   B E L O W !
          *************************************** -->
 
+<!-- Loading JQuery to help with Flickity Image Captions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Flickity JavaScript -->
+    <script src="js/flickity.pkgd.js"></script>
+
+    <!-- CAROUSEL: Flickity JavaScript Setup utilising Jquery -->
+    <script>
+        var $carousel = $('.main-carousel').flickity({
+            cellSelector: 'img',
+            imagesLoaded: true,
+            draggable: true,
+            // groupCells: true,
+            // groupCells: 3,
+            pageDots: false,
+            freeScroll: true,
+            wrapAround: true,
+            percentPosition: false,
+            cellAlign: 'left',
+            contain: true
+        });
+        var $caption = $('.caption');
+        // Flickity instance of each image caption
+        var flkty = $carousel.data('flickity');
+
+        $carousel.on('select.flickity', function () {
+            // set image caption using img's alt text
+            $caption.text(flkty.selectedElement.alt)
+        });
+    </script>
 
     <!-- JavaScript for the MOBILE NAV MENU -->
     <script>

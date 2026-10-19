@@ -34,9 +34,9 @@
     --medium-dark-text: #055723;
     --main-background: #ffe389;
     --header-background: #ffd651;
-    --dark-background: #002F15;
+    --dark-background: #ffa500;
     --landscape-background: #ffa500;
-    --dark-border-colour: #08331c;
+    --dark-border-colour: #ffa500;
     --button-colour: #ffa500;
     --dark-green: #13632e;
     --slide-out-menu-background: rgba(233, 240, 234, 0.93);
@@ -45,6 +45,7 @@
     --description-text: #8c8e8d;
     --description-text-colour: #fcfcfa;
     --light-silver: #fcfcfa;
+    --contact-colour: #ffa500;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -150,6 +151,7 @@ h2, h3, h4, h5 {
 
 .search-bar {
     width: 300px;
+    margin-right: 50px;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -193,15 +195,15 @@ header {
 .icon {
     display: none;
     position: absolute;
-    top: 1.5rem;
+    top: 3rem;
     right: 1rem;
     background: none;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 0;
-    color: #000;
-    font-size: 2rem;
+    color: #ffa500;
+    font-size: 3rem;
 }
 
 /* First breakpoint */
@@ -211,14 +213,19 @@ header {
         min-height: 4rem;
     }
 
-    .centred-logo {
-        width: 70px;
-        height: 70px; /*(Optional: specify a width if needed) */
-        }
-
     .logo-container {
+        display: flex;
         width: 100px;
         height: 100px;
+        align-items: center;
+    }
+
+    .centred-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 175px;
+    height: 175px; /*(Optional: specify a width if needed) */
     }
 
     .topnav a {
@@ -244,12 +251,12 @@ header {
 
     .topnav.responsive a {
         display: block;
-        text-align: right;
+        text-align: center;
     }
 }
 
 /* Second breakpoint */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 520px) {
     header h1 {
         max-width: 18.75rem;
         line-height: 100%;
@@ -260,6 +267,80 @@ header {
     }
     .search-bar {
         display: none;
+    }
+
+    .logo-container {
+        display: flex;
+        width: 100px;
+        height: 100px;
+                flex-direction: row-reverse;
+    }
+
+    .centred-logo {
+    display: flex;
+    margin-left: 0px;
+    margin-right: 320px;
+    width: 175px;
+    height: 175px; /*(Optional: specify a width if needed) */
+    }
+}
+
+/* Third breakpoint */
+@media screen and (max-width: 485px) {
+    header h1 {
+        max-width: 18.75rem;
+        line-height: 100%;
+    }
+
+    header {
+        padding-bottom: 2rem;
+    }
+    .search-bar {
+        display: none;
+    }
+
+    .logo-container {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        flex-direction: row-reverse;
+    }
+
+    .centred-logo {
+    display: flex;
+    margin-left: 0px;
+    margin-right: 230px;
+    width: 175px;
+    height: 175px; /*(Optional: specify a width if needed) */
+    }
+}
+/* Fourth breakpoint */
+@media screen and (max-width: 360px) {
+    header h1 {
+        max-width: 18.75rem;
+        line-height: 100%;
+    }
+
+    header {
+        padding-bottom: 2rem;
+    }
+    .search-bar {
+        display: none;
+    }
+
+    .logo-container {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        flex-direction: row-reverse;
+    }
+
+    .centred-logo {
+    display: flex;
+    margin-left: 0px;
+    margin-right: 190px;
+    width: 175px;
+    height: 175px; /*(Optional: specify a width if needed) */
     }
 }
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -335,6 +416,15 @@ width: 80px;
   
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
+.main-carousel {
+    height: 600px;
+    width: 800px;
+}
+
+.flickity-viewport {
+        width: 1000px;
+}
+
 .carousel-section .caption {
     background: #FAFAFA;
     margin: 0;
@@ -348,7 +438,21 @@ width: 80px;
 }
 
 .carousel-cell {
-    width: 100%;
+    width: 800px;
+    border-color: #ffa500;
+    border-width: 3rem;
+}
+
+.carousel-image {
+      display: block;
+        height: 200px;
+        /* set min-width,
+            allow images to determine cell width */
+        min-width: 150px;
+        max-width: 100%;
+        margin-right: 10px;
+        /* vertically center */
+        top: 50%;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -364,13 +468,13 @@ width: 80px;
 @supports (display: grid) {
     .about-page-block{
         display: grid;
+        margin-top: 3rem;
         gap: 1.5rem;
-        grid-auto-columns: 1fr;
-        grid-template-rows: auto;
+        /* grid-auto-columns: 1fr 1fr; */
+        grid-template-rows: auto 100px auto auto auto; 
         grid-template-areas:
             'about-h2 about-h2'
             'about-image about-top-swirls'
-            'about-image about-introduction-one'
             'about-image about-introduction-one'
             'about-introduction-two about-introduction-two'
             'about-bottom-swirls about-bottom-swirls';
@@ -378,6 +482,7 @@ width: 80px;
         width: min(95%, 70em);
         margin-inline: auto;
         align-items: start;
+        padding: 1rem;
     }
 }
 
@@ -399,7 +504,7 @@ width: 80px;
             'about-bottom-swirls';
         margin-left: 1em;
         align-items: start; 
-        grid-template-rows: 80px 1fr; 
+        justify-content: center;
     }
 }
 
@@ -419,6 +524,7 @@ width: 80px;
 .about-top-swirls {
     grid-area: about-top-swirls;
     width: 100%;
+    height: 80px;
     align-self: start;
 }
 
@@ -435,6 +541,7 @@ width: 80px;
     margin-bottom: .5rem;
     align-self: start;
     place-self: start start;
+    max-width: 400px;
 }
 
 .about-introduction-two {
@@ -445,9 +552,10 @@ width: 80px;
     margin-bottom: .5rem;
 }
 
+
 .single-item__h4 {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 
 .single-item__p {
@@ -516,32 +624,6 @@ width: 80px;
     font-size: .7rem;
     margin-bottom: 1rem;
 }
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-  
-    009.  MASONRY LAYOUT - for a mix of landscape and portrait format images
-  
-= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
-/* masonry grid CSS 
-.grid--masonry {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, min(24rem, 100%));
-    grid-template-rows: masonry;
-    justify-content: center;
-    grid-row-gap: 1.25rem;
-    grid-column-gap: 1.25rem;
-    grid-gap: 1.25rem;
-    padding: 1.25rem;
-}
-
-.grid--masonry>* {
-    width: min(24rem, 100%);
-}
-
-.grid--masonry a img {
-    border-radius: 4px;
-} */
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
@@ -624,7 +706,7 @@ width: 80px;
 
 .single-item__h4 {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 2rem;
 }
 
 .single-item__p {
@@ -647,14 +729,14 @@ width: 80px;
 
 /* This 'Next' button below is unused at the moment. Where might you use this in your web page? */
 .next-button {
-    background-color: var(--dark-text);
+    background-color: #ffa500;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin: 0 auto;
     border: 0;
     font-size: 26px;
-    color: var(--off-white);
+    color: #ffa500;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
@@ -665,7 +747,7 @@ width: 80px;
 }
 
 .next-button:hover {
-    background-color: var(--dark-text);
+    background-color: #ffa500;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -680,6 +762,7 @@ width: 80px;
 @supports (display: grid) {
     .contact-form {
         display: grid;
+        margin-top: 100px;
         gap: 1.5rem;
         grid-auto-columns: 1fr 1fr;
         grid-template-areas:
@@ -699,6 +782,7 @@ width: 80px;
 @media screen and (max-width: 1040px) {
     .contact-form {
         display: grid;
+        margin-top: 100px;
         grid-auto-columns: 1fr;
         grid-template-areas:
             'contact-heading'
@@ -718,6 +802,19 @@ width: 80px;
     }
 }
 
+.contact-form__heading {
+    grid-area: contact-heading;
+    color: var(--dark-text);
+    font-weight: 400;
+    font-size: 2.6rem;
+}
+
+.contact-form__heading p {
+    color: var(--dark-text);
+    font-weight: 100;
+}
+
+
 /*  For mobile device widths, elements are stacked in a single column */
 @media screen and (max-width: 600px) {
 
@@ -734,15 +831,14 @@ width: 80px;
     font-weight: 400;
     font-size: 2.6rem;
 }
+.contact-form__heading p {
+    color: var(--dark-text);
+    font-weight: 100;
+    font-size: 1.6rem;
+}
 
 .contact-form label {
     min-width: 100rem;
-}
-
-.contact-form h3,
-.contact-form p {
-    color: var(--dark-text);
-    font-weight: 500;
 }
 
 .contact-form__name {
@@ -772,12 +868,13 @@ width: 80px;
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-    border: none;
+    border-color: #fc9ec0;
+    border-width: 0.2rem;
     border-radius: 5px;
     font-size: 1rem;
     padding: 0 1.4rem;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-    background-color: var(--light-silver);
+    background-color: var(--contact-colour);
     color: var(--dark-text);
 }
 
@@ -794,7 +891,7 @@ width: 80px;
 
 .contact-form__submit button {
     background-color: var(--button-colour);
-    border: none;
+    border-color: #fc9ec0;
     color: var(--off-white);
     padding: 7px 20px;
     text-align: center;
@@ -845,8 +942,8 @@ footer {
     margin: 0 auto;
     background-color: var(--footer-background);
     padding: 2rem 2rem 2rem 2rem;
-    min-height: 7rem;
-    height: 170px;
+    /* min-height: 7rem;
+    height: 170px; */
     color: var(--off-white);
 }
 

@@ -79,14 +79,14 @@
     
         = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
-        <article class="introduction">
+        <!-- <article class="introduction">
             <h2>
                 Contact Me!
             </h2>
             <p>
                 Please send your message below.
             </p>
-        </article>
+        </article> -->
 
         <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
@@ -97,7 +97,12 @@
         <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/contact-success.html">
             <input type="hidden" name="form-name" value="contact">
 
-            <h3 class="contact-form__heading">Contact me</h3>
+            <div class="contact-form__heading">
+            <h3>Contact me</h3>
+            <p>
+                Please send your message below.
+            </p>
+            </div>
             <p class="contact-form__name">
                 <label>Your Name: </label><br><input type="text" name="name" placeholder="Name" required autofocus />
             </p>
