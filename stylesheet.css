@@ -1,7 +1,7 @@
 /*  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-  Author: Your name here
-  Date: creation date
+  Author: Emily Wister
+  Date: Tuesday September 21
 
   CONTENTS:
   ________
@@ -46,6 +46,9 @@
     --description-text-colour: #fcfcfa;
     --light-silver: #fcfcfa;
     --contact-colour: #ffa500;
+    --spoon: clamp(44px, 8vw, 64px);
+    --gap: 24px;
+    --size: min(270px, 100vw - 2 * var(--spoon) - 2rem); /* 270px, smaller only on narrow phones */
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -55,10 +58,9 @@
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 body {
-    font-family:  'Space Grotesk', sans-serif;
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "mrs-eaves", serif;
     font-weight: 400;
+    font-style: normal;
     font-style: normal;
     color: #1d1d1b;
     font-size: 1.2rem;
@@ -122,11 +124,21 @@ header h1 {
     color: var(--dark-text);
     font-weight: 600;
     font-family: "mrs-eaves", serif;
-    font-weight: 400;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center; 
+    color: #400A1C; 
+    font: 700 clamp(2rem, 6vw, 3.4rem) Georgia, serif;
+}
+
+header h2 {
+    font-family: "mrs-eaves", serif;
+    font-weight: 700;
     font-style: normal;
 }
 
-h2, h3, h4, h5 {
+
+h3, h4, h5 {
     font-family: "mrs-eaves", serif;
     font-weight: 400;
     font-style: normal;
@@ -416,14 +428,11 @@ width: 80px;
   
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-.main-carousel {
+/* .main-carousel {
     height: 600px;
     width: 800px;
 }
 
-/* .flickity-viewport {
-        width: 1000px;
-} */
 
 .carousel-section .caption {
     background: #FAFAFA;
@@ -446,35 +455,133 @@ width: 80px;
 .carousel-image {
       display: block;
         height: 200px;
-        /* set min-width,
-            allow images to determine cell width */
+       
         min-width: 150px;
         max-width: 100%;
         margin-right: 10px;
-        /* vertically center */
+       
         top: 50%;
+} */
+
+.slider { 
+    display: flex; 
+    justify-content: center; 
+    align-items: start; 
+    gap: 1rem; 
 }
 
+.spoon { 
+    border: 0; padding: 0; 
+    background: none; 
+    cursor: pointer; 
+    width: var(--spoon);
+    margin-top: calc(var(--size) / 2 - var(--spoon) * .15); 
+}
+.spoon img { 
+    display: block; 
+    width: 100%; 
+}
+
+.carousel {
+    /* shows as many whole slides as fit (max 3) – no breakpoints */
+    width: clamp(var(--size), round(down, 100% - 2 * var(--spoon) - 2rem + var(--gap), var(--size) + var(--gap)) - var(--gap), 3 * var(--size) + 2 * var(--gap));
+    display: flex;
+    gap: var(--gap);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+.carousel::-webkit-scrollbar { 
+    display: none; 
+}
+
+.carousel figure {
+    flex: 0 0 var(--size);
+    margin: 0; 
+    scroll-snap-align: start; 
+}
+.carousel img { display: block; 
+    width: 100%; 
+    aspect-ratio: 1; 
+    box-sizing: border-box;
+    border: 5px solid #EC9F05; 
+    border-radius: 35px; 
+    object-fit: cover; 
+}
+.carousel figcaption { 
+    margin-top: .5rem; 
+    text-align: center; 
+    color: #400A1C; 
+    font-weight: 400;
+}
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
     Recipe Layout
   
     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-.recipe-introduction{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px;
-}
+    .recipe-wrapper {
+        display: flex;
+        max-width: 1200px;
+        flex-direction: column;
+        margin: 0 auto;
+    }
 
-.heading-swirl-left{
-width: 80px;
-}
+    .recipe {
 
-.heading-swirl-right{
-width: 80px;
-}
+    }
+
+    .recipe-introduction {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 150px;
+    }
+
+    .heading-swirl-left{
+        width: 80px;
+    }
+
+    .heading-swirl-right{
+        width: 80px;
+    }
+
+    .recipe_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .recipe_ingredients {
+        margin-bottom: 2rem;
+    }
+
+    .recipe_recipe {
+        margin-top: 2rem;
+    }
+
+    .final_product {
+        border-radius: 50%;
+    }
+
+    .ingredients-heading {
+        display: flex;
+        flex-direction: row;
+        width: 5%;
+        margin: 1.2rem;
+    }
+
+    .recipe-heading {
+        display: flex;
+        flex-direction: row;
+        width: 5%;
+        margin: 1.2rem;
+    }
+
+    .final_product {
+        margin: 3rem;
+    }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
@@ -962,7 +1069,7 @@ footer {
     width: 100%;
     margin: 0 auto;
     background-color: var(--footer-background);
-    padding: 2rem 2rem 2rem 2rem;
+    /* padding: 2rem 2rem 2rem 2rem; */
     /* min-height: 7rem;
     height: 170px; */
     color: var(--off-white);
@@ -972,15 +1079,25 @@ footer p {
     font-size: .8rem;
 }
 
- .bottom-nav {
+.footer__menu {
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .footer__menu__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     gap: 0.5rem 2rem;
     align-content: center;
+    justify-content: space-evenly;
+    list-style-type: none;
 }
 
-.bottom-nav a {
+.footer__menu__list li a {
     font-family: "mrs-eaves", serif;;
     color: #000;
     text-decoration: none;
@@ -991,19 +1108,19 @@ footer p {
     text-align: center;
 }
 
-.bottom-nav a:hover {
+.footer__menu__list li a:hover {
     text-decoration: underline;
 }
 
-.bottom-nav a.current-page {
+/* .footer__menu__list a.current-page {
     font-weight: 600;
-} 
+}  */
 
 .footer_logo-container {
-    display: flex;
     width: 200px;
     /* height: 200px; */
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .footer-logo {
@@ -1014,11 +1131,18 @@ footer p {
   height: 150px; /*(Optional: specify a width if needed) */
 }
 
+.footer__copyright-details p {
+    font-size: .8rem;
+    font-weight: 200;
+    font-style: italic;
+    margin-top: .8rem;
+}
+
 /* .footer-layout{
     display: flex;
 } */
 
-@supports (display: grid) {
+/* @supports (display: grid) {
     .footer-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1052,14 +1176,14 @@ ul.footer__menu__list li a:hover {
     font-size: .8rem;
     font-weight: 200;
     font-style: italic;
-}
+} */
 
 /* *********************
     FOOTER MEDIA QUERIES
    ********************* */
 
 /* Max width 1120px or 70rem */
-@media screen and (max-width: 1120px) {
+/* @media screen and (max-width: 1120px) {
     .footer-grid {
         grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
     }
@@ -1093,7 +1217,7 @@ ul.footer__menu__list li a:hover {
     .footer-grid {
         grid-template-columns: 1fr;
     }
-}
+} */
 
 /* = = =   E N D   O F   T H E   C S S  = = = */
 
