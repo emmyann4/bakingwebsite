@@ -561,8 +561,19 @@ width: 80px;
         margin-top: 2rem;
     }
 
+    .recipe_ratings {
+        display: flex;
+        justify-content: center;
+    }
+
     .final_product {
+        width: 60%;
         border-radius: 50%;
+    }
+
+    .five-star-rating {
+        width: 400px;
+        /* margin-left: 2rem; */
     }
 
     .ingredients-heading {
@@ -582,6 +593,163 @@ width: 80px;
     .final_product {
         margin: 3rem;
     }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+  
+    011.  CONTACT FORM
+  
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/*  Here is the Contact Form arranged in two columns
+    A dot denotes a blank space, so the elements on those rows are left-aligned */
+
+@supports (display: grid) {
+    .rating-form {
+          display: grid;
+        gap: 1.5rem;
+        grid-auto-columns: 1fr 1fr;
+        grid-template-areas:
+            'rating-message .'
+            'rating-submit .';
+        padding-block: 2rem;
+        width: min(95%, 70rem);
+        margin-inline: auto;
+    }
+    }
+
+/*  For mobile device widths, elements are stacked in a single column */
+@media screen and (max-width: 1040px) {
+    .rating-form {
+        display: grid;
+        margin-top: 100px;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            'rating-message'
+            'rating-submit';
+        margin-left: 1rem;
+    }
+
+    .rating-form input,
+    .rating-form select,
+    .rating-form textarea {
+        width: 20rem;
+    }
+}
+
+.rating-form__heading {
+    grid-area: rating-heading;
+    color: var(--dark-text);
+    font-weight: 400;
+    font-size: 2.6rem;
+}
+
+.rating-form__heading p {
+    color: var(--dark-text);
+    font-weight: 100;
+}
+
+
+/*  For mobile device widths, elements are stacked in a single column */
+@media screen and (max-width: 600px) {
+
+    .rating-form input,
+    .rating-form select,
+    .rating-form textarea {
+        max-width: 90dvw;
+    }
+}
+
+.rating-form__heading {
+    grid-area: rating-heading;
+    color: var(--dark-text);
+    font-weight: 400;
+    font-size: 2.6rem;
+}
+.rating-form__heading p {
+    color: var(--dark-text);
+    font-weight: 100;
+    font-size: 1.6rem;
+}
+
+.rating-form label {
+    min-width: 100rem;
+}
+
+.rating-form__name {
+    grid-area: rating-name;
+}
+
+.rating-form__email {
+    grid-area: rating-email;
+}
+
+.rating-form__preference {
+    grid-area: rating-pref;
+}
+
+.rating-form__message {
+    grid-area: rating-message;
+}
+
+.rating-form__browser {
+    grid-area: rating-browser;
+}
+
+.rating-form__submit {
+    grid-area: rating-submit;
+}
+
+.rating-form input,
+.rating-form select,
+.rating-form textarea {
+    background-color:#ffa500;
+    border-color: #fc9ec0;
+    border-width: 0.2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0 1.4rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    color: var(--dark-text);
+}
+
+.rating-form .rating-form__message textarea {
+    padding-top: .8rem;
+    width: 30rem;
+}
+
+.rating-form input,
+.rating-form select {
+    height: 2.8rem;
+    width: 30rem;
+}
+
+.rating-form__submit button {
+    background-color: var(--button-colour);
+    border-color: #fc9ec0;
+    color: var(--off-white);
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    transition: all .3s;
+    border-radius: 5px;
+}
+
+.rating-form__submit button:hover {
+    color: var(--cream-text);
+    box-shadow: none;
+}
+
+.rating-form__submit button:active {
+    box-shadow: inset 0 2px 15px rgba(0, 0, 0, .3);
+}
+
+.success-page {
+    margin: 5dvw;
+}
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   
@@ -889,8 +1057,7 @@ width: 80px;
 
 @supports (display: grid) {
     .contact-form {
-        display: grid;
-        margin-top: 100px;
+          display: grid;
         gap: 1.5rem;
         grid-auto-columns: 1fr 1fr;
         grid-template-areas:
@@ -904,7 +1071,8 @@ width: 80px;
         width: min(95%, 70rem);
         margin-inline: auto;
     }
-}
+ }
+
 
 /*  For mobile device widths, elements are stacked in a single column */
 @media screen and (max-width: 1040px) {
