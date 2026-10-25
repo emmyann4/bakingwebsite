@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="mi"> <!-- Māori language. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Search Engine Optimisation (SEO) metadata. -->
+    <meta name="description" content="My website description." />
+    <link rel="canonical" href="http://design.ac.nz/student/2024/your-name/final-project" />
+    <meta property="og:locale" content="en_NZ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="My Website." />
+    <meta property="og:description" content="My website description." />
+    <meta property="og:url" content="http://design.ac.nz/student/2024/your-name/final-project" />
+    <meta property="og:site_name" content="My Website." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="My website description." />
+    <meta name="twitter:title" content="My Website." />
+    <meta name="twitter:site" content="@YourName" />
+    <meta name="twitter:creator" content="@YourName" />
+    <script
+        type='application/ld+json'>{"@context":"https://schema.org","@type":"WebSite","@id":"http://design.ac.nz/student/2024/your-name/final-project","url":"http://design.ac.nz/student/2024/your-name/final-project","name":"My Website.","potentialAction":{"@type":"SearchAction","target":"http://design.ac.nz/student/2024/your-name/final-project?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <script
+        type='application/ld+json'>{"@context":"https://schema.org","@type":"Organization","url":"http://design.ac.nz/student/2024/your-name/final-project","sameAs":["https://www.facebook.com/YourName/","https://www.instagram.com/YourName/","https://www.youtube.com/user/YourName","https://nz.pinterest.com/YourName/","https://twitter.com/YourName"],"@id":"http://design.ac.nz/student/2024/your-name/final-project#organization","name":"My Website. Limited","logo":"http://design.ac.nz/student/2024/your-name/final-project/images/logo.png"}</script>
+    <!-- / (SEO) metadata. -->
+
+    <!-- Google Fonts - Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts - hamburger menu icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />  
+
+    <!--Adobe Fonts headings-->
+    <link rel="stylesheet" href="https://use.typekit.net/ziu2vda.css">
+
+    <!-- Flickity Carousel CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <title>Website Template - Single Item</title>
+</head>
+
+<body>
+    <main> <!-- Maximum width of Main content area is 1200px -->
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+          HEADER AND NAVIGATION
+    
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <header>
+
+            <!-- <h1>The No Dairy Fairy</h1> -->
+            <nav class="topnav" id="myTopnav">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button type="button" class="icon" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="myTopnav">
+                <span class="material-symbols-outlined" id="menuIcon">menu</span>
+            </button>
+
+            <!-- <h1>The No Dairy Fairy</h1>  -->
+               <div class="logo-container">
+                    <img src="images/website-assets/logo-orange.png" alt="Centred Logo" class="centred-logo">
+               </div>
+
+            <img src="images/website-assets/search-bar-orange.svg" class="search-bar">
+        </header>
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+        RECIPE
+
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <div class="recipe-wrapper">
+
+        <div class="recipe-introduction">
+        <img src="images/website-assets/single-heading-swirl-left.png" alt="heading-swirl-left" class="heading-swirl-left">
+            <h2>
+                Lemon Loaf
+            </h2>
+        <img src="images/website-assets/single-heading-swirl-right.png" alt="heading-swirl-right" class="heading-swirl-right">
+        </div>
+
+       
+
+        <div class="slider">
+        <button class="spoon"><img src="images/website-assets/spoon-left.png" alt="Previous"></button>
+
+        <div class="carousel">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step2.JPG" alt="Preheat oven to 176°C, add granulated sugar and lemon zest, massage with hands to release oils into the sugar for flavour.">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step4.JPG" alt="Add dairy-free butter and vegetable oil, mix.">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step6.JPG" alt="Mix the eggs added one at a time.">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step8.JPG" alt="Add in the lemon juice, lemon extract and vanilla extract.">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step10.JPG" alt="In a separate bowl whisk the flour, baking powder and salt">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step12.JPG" alt="Add ⅓ of the dry ingredients to the wet mix">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step13.JPG" alt="Follow this by adding ⅓ of the dairy-free yogurt">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step13.JPG" alt="And then  adding ⅓ of the dairy-free milk repeat adding ⅓ of each until finishing on the dry mix">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step16.JPG" alt="Pour mix into a prepared bread tin bake for 50-55 minutes">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step17.JPG" alt="Take loaf out of the oven and allow to cool, prepare simple syrup bringing water and sugar to a boil, then adding lemon juice">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step19.JPG" alt="Coat loaf in simple syrup be generous about it, let in soak in">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step23.JPG" alt="Create glaze, mixing powdered sugar, lemon juice and milk until desired consistency">
+            <img src="images/lemon_loaf/jpgs/lemon_loaf-step25-final1.JPG" alt="Once loaf has fully cooled cover in glaze.">
+        </div>
+
+        <button class="spoon"><img src="images/website-assets/spoon-right.png" alt="Next"></button>
+        </div>
+
+        <article class="recipe">
+
+
+            <div class="recipe_image-carousel">
+                
+            </div>
+
+            <div class="recipe_block">
+                <div class="recipe_ingredients">
+                    <div class="ingredients-heading">
+                        <img src="images/website-assets/recipe-swirl-left.png" alt="recipe-swirl-left">
+                        <h3>Ingredients</h3>
+                        <img src="images/website-assets/recipe-swirl-right.png" alt="recipe-swirl-right">
+                    </div>
+                    <ul>
+                        <li>1 cup plus 2 tablespoons granulated sugar (for the loaf)</li>
+                        <li>3 tablespoons lemon zest (for the loaf)</li>
+                        <li>¼ cup unsalted dairy-free butter, room temperature (for the loaf)</li>
+                        <li>¼ cup vegetable oil (for the loaf)</li>
+                        <li>3 large eggs (for the loaf)</li>
+                        <li>2 tablespoons fresh lemon juice (for the loaf)</li>
+                        <li>1 teaspoon vanilla (for the loaf)</li>
+                        <li>½ to 1 teaspoon lemon extract (for the loaf)</li>
+                        <li>1 ¾ cups all-purpose flour (for the loaf)</li>
+                        <li>1 teaspoon baking powder (for the loaf)</li>
+                        <li>½ teaspoon salt (for the loaf)</li>
+                        <li>⅓ cup dairy-free Greek yogurt (for the loaf)</li>
+                        <li>⅓ cup dairy-free milk (for the loaf)</li>
+                        <li>¼ cup water (for the simple syrup)</li>
+                        <li>¼ cup granulated sugar (for the simple syrup)</li>
+                        <li>juice of ½ lemon (for the simple syrup)</li>
+                        <li>1 cup powdered sugar, sifted (for the glaze)</li>
+                        <li>2 tablespoons dairy-free milk (for the glaze)</li>
+                        <li>2 tablespoons fresh lemon juice(for the glaze)</li>
+                    </ul>
+                </div>
+                <div class="recipe_recipe">
+                   <div class="recipe-heading">
+                    <img src="images/website-assets/recipe-swirl-left.png" alt="recipe-swirl-left">
+                    <h3>Recipe</h3>
+                    <img src="images/website-assets/recipe-swirl-right.png" alt="recipe-swirl-right">
+                    </div>
+                    <ol>
+                        <li>Preheat oven to 176°C. Line a 9 x 5 inch pan with parchment paper. Allow 1 to 2 inches of the paper to hang over the sides of the pan for easy removal of the cake once baked. Set aside.</li>
+                        <li>To the bowl of a stand mixer fitted with the paddle attachment, add the granulated sugar and lemon zest. Use your hands to massage the zest into the sugar for about 30 seconds. This helps to release the oils from the zest into the sugar, making the cake more flavorful.</li>
+                        <li>Add the butter and vegetable oil to the mixing bowl. Mix on medium high speed until the mixture is light and fluffy, about 3 minutes. Scrape down the sides of the bowl.</li>
+                        <li>Add the eggs, one at a time, mixing well between each addition. Scrape down the sides of the bowl.</li>
+                        <li>Add the lemon juice, vanilla and lemon extract. Mix to combine well.</li>
+                        <li>In a separate bowl, whisk together the flour, baking powder and salt.</li>
+                        <li>Add the dry ingredients to the butter and sugar mixture in three additions, alternating with the Greek yogurt and milk. Begin and end with the dry ingredients.</li>
+                        <li>Scrape down the sides of the bowl once more. Transfer the batter to the prepared baking pan. Bake for 50 to 55 minutes or until a toothpick inserted into the center of the cake comes out clean or with a few crumbs remaining. If the top of the cake is browning too quickly towards the end of the baking time, cover the cake loosely with a piece of aluminum foil.</li>
+                        <li>Remove the cake from the oven. Allow to cool for about 5 minute while you make the lemon simple syrup.</li>
+                        <li>In a small saucepan, bring the water and sugar to a boil for about one minute.</li>
+                        <li>Remove from the heat and stir in the lemon juice.</li>
+                        <li>Use a pastry brush to coat the top of the warm cake with the lemon simple syrup. Brush the syrup over the top of the cake several times until generously coated.</li>
+                        <li>In a medium bowl, add the powdered sugar, lemon juice and milk. Use a whisk to stir the icing until smooth and shiny. If the glaze is too thick, add more lemon juice or milk. If too thin, add more powdered sugar. The icing should be thick, but pourable.</li>
+                        <li>Drizzle the glaze over the top of the loaf. Allow the glaze to set for 10 to 15 minutes before slicing.</li>
+                    </ol>
+                </div>
+            </div>
+    </article>
+
+    <article class="recipe_ratings">
+        <img src="images/lemon_loaf/jpgs/lemon_loaf-step32-final8.JPG" alt="lemon loaf" class="final_product">
+        <img src="images/website-assets/five-star-rating.svg" alt="five-star-rating" class="five-star-rating">
+    </article>
+
+    <div>
+        <form name="rating" method="POST" data-netlify="true" class="rating-form" action="/rating-success.html">
+        <input type="hidden" name="form-name" value="rating">
+        <p class="rating-form__message">
+            <label>Message: </label><br><textarea name="message" rows="7" cols="60"
+            placeholder="Type your message. . ."></textarea>
+        </p>
+        <p class="rating-form__submit">
+            <button type="submit">Send</button>
+        </p>
+    </div>
+
+    </div> <!-- END OF RECIPE WRAPPER -->
+
+        <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+            FOOTER
+
+        = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+        <footer>
+                <article class="footer__menu">
+                    <div class="footer_logo-container">
+                        <img src="images/website-assets/logo-orange.png" alt="Centred Logo" class="centred-logo">
+                     </div>
+                    <ul class="footer__menu__list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">References</a></li>
+                    </ul>
+
+                    <div class="footer__copyright-details">
+                        <p>All images are in the public domain.<br>Emily Wister &copy; 2026.</p>
+                        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span
+                        property="dct:title">This website</span> by <span property="cc:attributionName">Emily Wister</span></p>
+                    </div>
+                </article>
+        </footer>
+
+    </main>
+
+    <!-- ***************************************
+            J A V A S C R I P T   B E L O W !
+         *************************************** -->
+
+     <script src="js/carousel.js"></script>
+
+    <!-- JavaScript for the MOBILE NAV MENU -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("myTopnav");
+            const icon = document.getElementById("menuIcon");
+            const btn = document.getElementById("menuToggle");
+
+            const isOpen = nav.classList.toggle("responsive");
+            icon.textContent = isOpen ? "close" : "menu";
+            btn.setAttribute("aria-expanded", isOpen);
+        }
+    </script>
+</body>
+
+</html>
